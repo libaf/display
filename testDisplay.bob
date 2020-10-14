@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <width>1200</width>
+  <height>900</height>
+  <background_color>
+    <color red="204" green="204" blue="204">
+    </color>
+  </background_color>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>LIBAF</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>65</width>
+    <height>25</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Some Value:</text>
+    <y>50</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>sim://sine</pv_name>
+    <x>100</x>
+    <y>50</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <class>COMMENT</class>
+    <text>Some comment.</text>
+    <x>220</x>
+    <y>50</y>
+    <width>140</width>
+    <font use_class="true">
+      <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+    <wrap_words use_class="true">true</wrap_words>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO1</pv_name>
+    <x>90</x>
+    <y>181</y>
+    <off_color>
+      <color name="LED-RED-ON" red="255" green="60" blue="46">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="stripchart" version="2.0.0">
+    <name>Strip Chart</name>
+    <x>40</x>
+    <y>346</y>
+    <width>337</width>
+    <height>223</height>
+    <show_grid>true</show_grid>
+    <show_toolbar>false</show_toolbar>
+    <tooltip>Combo</tooltip>
+    <y_axes>
+      <y_axis>
+        <title>Y</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>true</show_grid>
+        <visible>true</visible>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <y_pv>IOC_TEST:ec0-s3-EL3164-AI1</y_pv>
+        <axis>0</axis>
+        <trace_type>2</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>$(traces[1].y_pv)</name>
+        <y_pv>IOC_TEST:ec0-s3-EL3164-AI4</y_pv>
+        <axis>0</axis>
+        <trace_type>2</trace_type>
+        <color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="scaledslider" version="2.0.0">
+    <name>Scaled Slider</name>
+    <pv_name>IOC_TEST:ec0-s4-EL4102-AO1</pv_name>
+    <x>79</x>
+    <y>578</y>
+    <width>280</width>
+    <height>50</height>
+    <level_hihi>10.0</level_hihi>
+    <level_high>8.0</level_high>
+    <level_low>2.0</level_low>
+    <level_lolo>0.0</level_lolo>
+    <show_high>false</show_high>
+    <show_low>false</show_low>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <maximum>10.0</maximum>
+    <limits_from_pv>false</limits_from_pv>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_1</name>
+    <pv_name>IOC_TEST:ec0-s5-EL2624-BO1</pv_name>
+    <x>230</x>
+    <y>181</y>
+    <off_color>
+      <color name="LED-RED-ON" red="255" green="60" blue="46">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>EL2602</text>
+    <x>117</x>
+    <y>156</y>
+    <width>63</width>
+    <height>15</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>EL4102-AO1</text>
+    <x>173</x>
+    <y>647</y>
+    <width>102</width>
+    <height>18</height>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>IOC_TEST:ec0-s2-EL2602-BO1-RB</pv_name>
+    <x>119</x>
+    <y>104</y>
+    <width>47</width>
+    <height>46</height>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_3</name>
+    <pv_name>IOC_TEST:ec0-s5-EL2624-BO1-RB</pv_name>
+    <x>255</x>
+    <y>105</y>
+    <width>47</width>
+    <height>46</height>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>EL2624</text>
+    <x>253</x>
+    <y>157</y>
+    <width>63</width>
+    <height>15</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_3</name>
+    <pv_name>IOC_TEST:ec0-s2-EL2602-BO2</pv_name>
+    <x>92</x>
+    <y>310</y>
+    <off_color>
+      <color name="LED-RED-ON" red="255" green="60" blue="46">
+      </color>
+    </off_color>
+    <actions execute_as_one="true">
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>EL2602</text>
+    <x>119</x>
+    <y>285</y>
+    <width>63</width>
+    <height>15</height>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <pv_name>IOC_TEST:ec0-s2-EL2602-BO2-RB</pv_name>
+    <x>121</x>
+    <y>233</y>
+    <width>47</width>
+    <height>46</height>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>IOC_TEST:ec0-s1-EL9227-5500-CH1-Enabled</pv_name>
+    <x>393</x>
+    <y>29</y>
+    <width>47</width>
+    <height>46</height>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="stripchart" version="2.0.0">
+    <name>Strip Chart_1</name>
+    <x>385</x>
+    <y>348</y>
+    <width>335</width>
+    <height>222</height>
+    <show_grid>true</show_grid>
+    <show_toolbar>false</show_toolbar>
+    <tooltip>Combo</tooltip>
+    <y_axes>
+      <y_axis>
+        <title>Y</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>true</show_grid>
+        <visible>true</visible>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <y_pv>IOC_TEST:ec0-s4-EL4102-AO1</y_pv>
+        <axis>0</axis>
+        <trace_type>2</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>$(traces[1].y_pv)</name>
+        <y_pv>IOC_TEST:ec0-s3-EL4102-AO1-RB</y_pv>
+        <axis>0</axis>
+        <trace_type>2</trace_type>
+        <color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>EL2624</text>
+    <x>257</x>
+    <y>284</y>
+    <width>63</width>
+    <height>15</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_4</name>
+    <pv_name>IOC_TEST:ec0-s5-EL2624-BO2</pv_name>
+    <x>234</x>
+    <y>308</y>
+    <off_color>
+      <color name="LED-RED-ON" red="255" green="60" blue="46">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_6</name>
+    <pv_name>IOC_TEST:ec0-s5-EL2624-BO2-RB</pv_name>
+    <x>259</x>
+    <y>232</y>
+    <width>47</width>
+    <height>46</height>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>EL2624</text>
+    <x>394</x>
+    <y>285</y>
+    <width>63</width>
+    <height>15</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_5</name>
+    <pv_name>IOC_TEST:ec0-s5-EL2624-BO4</pv_name>
+    <x>371</x>
+    <y>309</y>
+    <off_color>
+      <color name="LED-RED-ON" red="255" green="60" blue="46">
+      </color>
+    </off_color>
+    <show_confirm_dialog>2</show_confirm_dialog>
+    <password>test</password>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_7</name>
+    <pv_name>IOC_TEST:ec0-s5-EL2624-BO4-RB</pv_name>
+    <x>396</x>
+    <y>233</y>
+    <width>47</width>
+    <height>46</height>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>EL2624</text>
+    <x>393</x>
+    <y>156</y>
+    <width>63</width>
+    <height>15</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_6</name>
+    <pv_name>IOC_TEST:ec0-s5-EL2624-BO3</pv_name>
+    <x>370</x>
+    <y>180</y>
+    <off_color>
+      <color name="LED-RED-ON" red="255" green="60" blue="46">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_8</name>
+    <pv_name>IOC_TEST:ec0-s5-EL2624-BO3-RB</pv_name>
+    <x>395</x>
+    <y>104</y>
+    <width>47</width>
+    <height>46</height>
+    <off_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="scaledslider" version="2.0.0">
+    <name>Scaled Slider_2</name>
+    <pv_name>IOC_TEST:Axis1.JVEL</pv_name>
+    <x>603</x>
+    <y>82</y>
+    <width>158</width>
+    <height>53</height>
+    <show_hihi>false</show_hihi>
+    <show_high>false</show_high>
+    <show_low>false</show_low>
+    <show_lolo>false</show_lolo>
+    <maximum>100,</maximum>
+    <limits_from_pv>false</limits_from_pv>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_7</name>
+    <pv_name>IOC_TEST:Axis1.JOGF</pv_name>
+    <x>486</x>
+    <y>135</y>
+    <width>65</width>
+    <off_label>Push</off_label>
+    <on_label>Push</on_label>
+    <mode>1</mode>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>IOC_TEST:Axis1.JOGF</pv_name>
+    <text>JOGF</text>
+    <x>565</x>
+    <y>117</y>
+    <width>60</width>
+    <height>36</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_5</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>IOC_TEST:Axis1.JOGF</pv_name>
+    <text>Stop</text>
+    <x>638</x>
+    <y>135</y>
+    <width>68</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <x>517</x>
+    <y>226</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_6</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>IOC_TEST:ec0-s6-EL7047-Drv-Spd</pv_name>
+    <text>Speed 0</text>
+    <x>718</x>
+    <y>136</y>
+    <width>76</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="slide_button" version="2.0.0">
+    <name>Slide Button</name>
+    <pv_name>IOC_TEST:Axis1.CNEN</pv_name>
+    <label>Activate</label>
+    <x>471</x>
+    <y>76</y>
+    <width>113</width>
+    <height>34</height>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <x>91</x>
+    <y>78</y>
+    <line_width>5</line_width>
+    <rules>
+      <rule name="Test" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0&gt;0">
+          <value>
+            <color name="Off" red="60" green="100" blue="60">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0=0">
+          <value>
+            <color name="MINOR" red="255" green="128" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO1-RB</pv_name>
+      </rule>
+      <rule name="TestLine" prop_id="line_color" out_exp="false">
+        <exp bool_exp="pv0&gt;0">
+          <value>
+            <color name="ActiveText" red="255" green="255" blue="0">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0=0">
+          <value>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO2-RB</pv_name>
+        <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO1-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="symbol" version="2.0.0">
+    <name>Symbol</name>
+    <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO1-RB</pv_name>
+    <symbols>
+      <symbol>examples/Display Builder/pic/switch_off.gif</symbol>
+      <symbol>examples/Display Builder/pic/switch_on.gif</symbol>
+    </symbols>
+    <x>696</x>
+    <y>589</y>
+    <width>90</width>
+    <height>83</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_8</name>
+    <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO1</pv_name>
+    <x>538</x>
+    <y>608</y>
+    <width>150</width>
+    <height>68</height>
+    <off_image>examples/Display Builder/pic/switch_off.gif</off_image>
+    <on_image>examples/Display Builder/pic/switch_on.gif</on_image>
+    <background_color>
+      <color red="204" green="204" blue="204">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon_2</name>
+    <x>943</x>
+    <y>107</y>
+    <width>1</width>
+    <height>1</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon_6</name>
+    <x>396</x>
+    <y>606</y>
+    <width>105</width>
+    <height>101</height>
+    <points>
+      <point x="55.036224365234375" y="0.0">
+      </point>
+      <point x="105.87459195341279" y="0.0">
+      </point>
+      <point x="77.70663411673854" y="45.98027077062102">
+      </point>
+      <point x="55.90826941444618" y="0.7191648204997136">
+      </point>
+      <point x="78.24342466303132" y="49.01104887272732">
+      </point>
+      <point x="55.68911177260487" y="101.03181825717161">
+      </point>
+      <point x="104.49680394047768" y="101.04200643119157">
+      </point>
+      <point x="77.06529367197095" y="47.39576952718255">
+      </point>
+      <point x="0.643076643000029" y="46.80981026270308">
+      </point>
+      <point x="0.0" y="25.80912597656254">
+      </point>
+      <point x="0.579315185546875" y="67.10367919921873">
+      </point>
+      <point x="0.7183821417366404" y="46.8822459940169">
+      </point>
+      <point x="77.92582533889761" y="47.475396698883856">
+      </point>
+    </points>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon_7</name>
+    <x>847</x>
+    <y>569</y>
+    <width>122</width>
+    <height>131</height>
+    <points>
+      <point x="63.9468511672247" y="0.0">
+      </point>
+      <point x="123.0161925553939" y="0.0">
+      </point>
+      <point x="90.28770821182955" y="59.6377769401124">
+      </point>
+      <point x="64.96008446249938" y="0.9327781335194305">
+      </point>
+      <point x="90.91140770371258" y="63.56878616165622">
+      </point>
+      <point x="64.70544415483612" y="131.04126922464832">
+      </point>
+      <point x="121.4153341022693" y="131.05448358897124">
+      </point>
+      <point x="89.54253169505195" y="61.47372087189024">
+      </point>
+      <point x="0.7471938137714623" y="60.713714301129734">
+      </point>
+      <point x="0.0" y="33.47520299930388">
+      </point>
+      <point x="0.6731090727306547" y="87.03546509997676">
+      </point>
+      <point x="0.834691631351144" y="60.80766559620013">
+      </point>
+      <point x="90.54238753662388" y="61.57699967875034">
+      </point>
+    </points>
+    <rules>
+      <rule name="Colour" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0&gt;0">
+          <value>
+            <color name="OK" red="0" green="255" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>IOC_TEST:ec0-s2-EL2602-BO1-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_1</name>
+    <x>214</x>
+    <y>749</y>
+    <width>396</width>
+    <height>56</height>
+  </widget>
+  <widget type="symbol" version="2.0.0">
+    <name>Symbol_1</name>
+    <pv_name>IOC_TEST:ec0-s2-EL2602-BO1-RB</pv_name>
+    <symbols>
+      <symbol>../Downloads/valve.png</symbol>
+      <symbol>../Downloads/valve1.png</symbol>
+    </symbols>
+    <x>596</x>
+    <y>675</y>
+    <width>157</width>
+    <height>144</height>
+  </widget>
+  <widget type="symbol" version="2.0.0">
+    <name>Symbol_6</name>
+    <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO1</pv_name>
+    <symbols>
+      <symbol>pic/beamlineVacOKBeamOn.svg</symbol>
+      <symbol>pic/beamlineVacMinorBeamOn.svg</symbol>
+      <symbol>pic/beamlineVacMajorBeamOn.svg</symbol>
+      <symbol>pic/beamlineVacOKBeamOff.svg</symbol>
+      <symbol>pic/beamlineVacMinorBeamOff.svg</symbol>
+      <symbol>pic/beamlineVacMajorBeamOff.svg</symbol>
+    </symbols>
+    <x>753</x>
+    <y>419</y>
+    <width>228</width>
+    <height>166</height>
+    <rules>
+      <rule name="Beamline" prop_id="symbols[0]" out_exp="false">
+        <exp bool_exp="pv0=0 ">
+          <value>pic/beamlineVacOKBeamOn.svg</value>
+        </exp>
+        <exp bool_exp="pv1=1">
+          <value>pic/beamlineVacMinorBeamOn.svg</value>
+        </exp>
+        <exp bool_exp="pv3=HIHI">
+          <value>pic/beamlineVacMajorBeamOff.svg</value>
+        </exp>
+        <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO1-RB</pv_name>
+        <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO2-RB</pv_name>
+        <pv_name>pva://IOC_TEST:ec0-s5-EL2624-BO1-RB</pv_name>
+        <pv_name>pva://IOC_TEST:TPG256a:2:P.STAT</pv_name>
+      </rule>
+    </rules>
+    <preserve_ratio>false</preserve_ratio>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank_1</name>
+    <x>1014</x>
+    <y>440</y>
+    <minimum>$(TEST)</minimum>
+    <maximum>$(MAX)</maximum>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>pva://TPG256a:2:P</pv_name>
+    <x>1028</x>
+    <y>647</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>pva://TPG256a:2:P.STAT</pv_name>
+    <x>1020</x>
+    <y>690</y>
+    <width>141</width>
+    <height>50</height>
+  </widget>
+  <widget type="symbol" version="2.0.0">
+    <name>Symbol_2</name>
+    <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO1</pv_name>
+    <symbols>
+      <symbol>pic/beamlineVacOKBeamOff.svg</symbol>
+      <symbol>pic/beamlineVacOKBeamOn.svg</symbol>
+      <symbol>pic/beamlineVacMajorBeamOff.svg</symbol>
+      <symbol>pic/beamlineVacMajorBeamOn.svg</symbol>
+    </symbols>
+    <x>753</x>
+    <y>720</y>
+    <width>250</width>
+    <height>60</height>
+    <rules>
+      <rule name="Test" prop_id="name" out_exp="false">
+        <exp bool_exp="pv0=&quot;HIGH&quot; &amp;&amp; pv1=0">
+          <value>Symbol_1</value>
+        </exp>
+        <exp bool_exp="pv0=&quot;HIGH&quot; &amp;&amp; pv1=1">
+          <value>Symbol_2</value>
+        </exp>
+        <exp bool_exp="pv0=&quot;HIHI&quot; &amp;&amp; pv1=0">
+          <value>Symbol_3</value>
+        </exp>
+        <exp bool_exp="pv0=&quot;HIHI&quot; &amp;&amp; pv1=1">
+          <value>Symbol_4</value>
+        </exp>
+        <pv_name>pva://TPG256a:2:P.STAT</pv_name>
+        <pv_name>pva://IOC_TEST:ec0-s2-EL2602-BO1</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="slide_button" version="2.0.0">
+    <name>Slide Button_1</name>
+    <pv_name>IOC_TEST:Axis2.CNEN</pv_name>
+    <label>Activate</label>
+    <x>847</x>
+    <y>68</y>
+    <width>113</width>
+    <height>34</height>
+  </widget>
+  <widget type="scaledslider" version="2.0.0">
+    <name>Scaled Slider_3</name>
+    <pv_name>IOC_TEST:Axis2.JVEL</pv_name>
+    <x>964</x>
+    <y>68</y>
+    <width>158</width>
+    <height>53</height>
+    <show_hihi>false</show_hihi>
+    <show_high>false</show_high>
+    <show_low>false</show_low>
+    <show_lolo>false</show_lolo>
+    <maximum>500.0</maximum>
+    <limits_from_pv>false</limits_from_pv>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_9</name>
+    <pv_name>IOC_TEST:Axis2.JOGF</pv_name>
+    <x>847</x>
+    <y>121</y>
+    <width>65</width>
+    <off_label>Push</off_label>
+    <on_label>Push</on_label>
+    <mode>1</mode>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_7</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>IOC_TEST:Axis2.JOGF</pv_name>
+    <text>Start</text>
+    <x>926</x>
+    <y>120</y>
+    <width>60</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_8</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>IOC_TEST:Axis2.JOGF</pv_name>
+    <text>Stop</text>
+    <x>999</x>
+    <y>121</y>
+    <width>68</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_9</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>IOC_TEST:ec0-s8-EL7047-Drv-Spd</pv_name>
+    <text>Speed 0</text>
+    <x>1079</x>
+    <y>122</y>
+    <width>76</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_2</name>
+    <pv_name>pva://EL1014_DI1</pv_name>
+    <x>517</x>
+    <y>216</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_9</name>
+    <pv_name>pva://EL1014_DI2</pv_name>
+    <x>642</x>
+    <y>218</y>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_10</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>IOC_TEST:Axis1.JOGR</pv_name>
+    <text>JOGR</text>
+    <x>565</x>
+    <y>153</y>
+    <width>60</width>
+    <height>36</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>pva://IOC_TEST:Axis1.RBV</pv_name>
+    <x>486</x>
+    <y>48</y>
+    <width>99</width>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Axis 1 Position</text>
+    <x>492</x>
+    <y>29</y>
+    <width>97</width>
+    <height>19</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>Axis 1 Target</text>
+    <x>631</x>
+    <y>29</y>
+    <width>97</width>
+    <height>19</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_12</name>
+    <text>Low Limit</text>
+    <x>503</x>
+    <y>197</y>
+    <width>99</width>
+    <height>19</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_13</name>
+    <text>High Limit</text>
+    <x>620</x>
+    <y>199</y>
+    <width>70</width>
+    <height>19</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>pva://IOC_TEST:Axis1.VAL</pv_name>
+    <x>625</x>
+    <y>48</y>
+    <show_units>false</show_units>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <x>672</x>
+    <y>169</y>
+    <width>1</width>
+    <height>1</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="scaledslider" version="2.0.0">
+    <name>Scaled Slider_1</name>
+    <pv_name>IOC_TEST:ec0-s5-EL7047-Drv-Spd</pv_name>
+    <x>115</x>
+    <y>690</y>
+    <width>141</width>
+    <height>53</height>
+    <show_hihi>false</show_hihi>
+    <show_high>false</show_high>
+    <show_low>false</show_low>
+    <show_lolo>false</show_lolo>
+    <minimum>-100.0</minimum>
+    <maximum>20000.0</maximum>
+    <limits_from_pv>false</limits_from_pv>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_2</name>
+    <pv_name>IOC_TEST:ec0-s5-EL7047-Drv-Cmd</pv_name>
+    <x>50</x>
+    <y>739</y>
+    <width>48</width>
+    <off_label>Push</off_label>
+    <on_label>Push</on_label>
+    <mode>1</mode>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>IOC_TEST:ec0-s5-EL7047-Drv-Cmd</pv_name>
+    <text>Start</text>
+    <x>129</x>
+    <y>738</y>
+    <width>43</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>IOC_TEST:ec0-s5-EL7047-Drv-Cmd</pv_name>
+    <text>Stop</text>
+    <x>202</x>
+    <y>739</y>
+    <width>51</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="meter" version="3.0.0">
+    <name>Meter</name>
+    <pv_name>IOC_TEST:ec0-s5-EL7047-Drv-Spd</pv_name>
+    <x>67</x>
+    <y>773</y>
+    <width>95</width>
+    <limits_from_pv>false</limits_from_pv>
+    <maximum>20000.0</maximum>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <x>130</x>
+    <y>866</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="meter" version="3.0.0">
+    <name>Meter_1</name>
+    <pv_name>IOC_TEST:ec0-s5-EL7047-Drv-Spd-RB</pv_name>
+    <x>183</x>
+    <y>774</y>
+    <width>95</width>
+    <limits_from_pv>false</limits_from_pv>
+    <maximum>20000.0</maximum>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>IOC_TEST:ec0-s5-EL7047-Drv-Spd</pv_name>
+    <text>Speed 0</text>
+    <x>282</x>
+    <y>740</y>
+    <width>59</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>Axis 2</text>
+    <x>847</x>
+    <y>29</y>
+    <width>97</width>
+    <height>19</height>
+  </widget>
+</display>
